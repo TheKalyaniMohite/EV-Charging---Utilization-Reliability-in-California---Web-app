@@ -309,7 +309,7 @@ export default function Home() {
             <Section title="Detailed Insights" variant="primary">
               <div className="space-y-8">
                 <p className="text-xl text-slate-700 leading-relaxed mb-8">
-                  California's EV charging landscape shows clear patterns that help target where to expand, what to upgrade, and where operations may get stressed.
+                  California&apos;s EV charging landscape shows clear patterns that help target where to expand, what to upgrade, and where operations may get stressed.
                 </p>
                 
                 <div className="grid gap-8">

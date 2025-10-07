@@ -379,7 +379,7 @@ export default function Home() {
                         <div className="w-3 h-3 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
                         <div>
                           <p className="text-lg font-semibold text-blue-800 mb-2">Upgrade Candidates</p>
-                          <p className="text-slate-700 leading-relaxed">Sites with many Level-2 ports but no DCFC are prime "add DC fast here" targets: demand already exists; throughput is constrained.</p>
+                          <p className="text-slate-700 leading-relaxed">Sites with many Level-2 ports but no DCFC are prime &quot;add DC fast here&quot; targets: demand already exists; throughput is constrained.</p>
                         </div>
                       </div>
                     </div>
@@ -408,7 +408,7 @@ export default function Home() {
                         <div>
                           <p className="text-lg font-semibold text-blue-800 mb-3">Likely Busy Stations (Ops Watchlist)</p>
                           <div className="space-y-2 text-slate-700 leading-relaxed">
-                            <p>A "likely busy" list (weighted by DCFC count and total ports) surfaces sites prone to queuing / stress.</p>
+                            <p>A &quot;likely busy&quot; list (weighted by DCFC count and total ports) surfaces sites prone to queuing / stress.</p>
                             <p><strong>Example:</strong> LADWP – John Ferraro Building (Los Angeles) appears as a top watchlist site for reliability and potential expansion.</p>
                           </div>
                         </div>

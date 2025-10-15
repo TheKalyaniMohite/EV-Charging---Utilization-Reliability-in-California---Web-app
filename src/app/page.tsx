@@ -22,46 +22,46 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-green-50">
       {/* HEADER */}
-      <header className="relative mx-auto max-w-7xl px-6 py-16 lg:py-20">
+      <header className="relative mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
         {/* Background decorative elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-green-100/30 to-blue-100/30 rounded-full blur-3xl -z-10"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-emerald-100/40 to-cyan-100/40 rounded-full blur-2xl -z-10"></div>
+        <div className="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-br from-green-100/30 to-blue-100/30 rounded-full blur-3xl -z-10"></div>
+        <div className="absolute bottom-0 left-0 w-48 sm:w-64 h-48 sm:h-64 bg-gradient-to-tr from-emerald-100/40 to-cyan-100/40 rounded-full blur-2xl -z-10"></div>
         
         <div className="relative text-center lg:text-left">
           {/* Live badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-8 card-shadow">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-green-100 text-green-800 rounded-full text-xs sm:text-sm font-medium mb-6 sm:mb-8 card-shadow">
             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse-soft"></div>
             Based on 2024 data
           </div>
           
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-slate-900 mb-4 sm:mb-6">
             EV Charging: Utilization & Reliability
-            <span className="block text-california-gradient mt-2">
+            <span className="block text-california-gradient mt-1 sm:mt-2">
               in California
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-slate-600 mt-8 max-w-4xl mx-auto lg:mx-0 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 mt-6 sm:mt-8 max-w-4xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0">
           This is a comprehensive analysis of where EV chargers exist in California relative to demand, pinpointing coverage gaps, high-demand counties, and priority sites for adding DC fast charging.
           </p>
           
           {/* Key statistics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-            <div className="text-center p-6 bg-white/80 backdrop-blur-enhanced rounded-2xl border border-slate-200/50 card-shadow-lg">
-              <div className="text-3xl font-bold text-slate-900 mb-2">58</div>
-              <div className="text-sm font-medium text-slate-600 uppercase tracking-wide">Counties</div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-8 sm:mt-12 px-2 sm:px-0">
+            <div className="text-center p-4 sm:p-6 bg-white/80 backdrop-blur-enhanced rounded-2xl border border-slate-200/50 card-shadow-lg">
+              <div className="text-2xl sm:text-3xl font-bold text-slate-900 mb-1 sm:mb-2">58</div>
+              <div className="text-xs sm:text-sm font-medium text-slate-600 uppercase tracking-wide">Counties</div>
             </div>
-            <div className="text-center p-6 bg-white/80 backdrop-blur-enhanced rounded-2xl border border-green-200/50 card-shadow-lg">
-              <div className="text-3xl font-bold text-green-600 mb-2">136K+</div>
-              <div className="text-sm font-medium text-slate-600 uppercase tracking-wide">Charging Ports</div>
+            <div className="text-center p-4 sm:p-6 bg-white/80 backdrop-blur-enhanced rounded-2xl border border-green-200/50 card-shadow-lg">
+              <div className="text-2xl sm:text-3xl font-bold text-green-600 mb-1 sm:mb-2">136K+</div>
+              <div className="text-xs sm:text-sm font-medium text-slate-600 uppercase tracking-wide">Charging Ports</div>
             </div>
-            <div className="text-center p-6 bg-white/80 backdrop-blur-enhanced rounded-2xl border border-blue-200/50 card-shadow-lg">
-              <div className="text-3xl font-bold text-blue-600 mb-2">DCFC</div>
-              <div className="text-sm font-medium text-slate-600 uppercase tracking-wide">8.6K</div>
+            <div className="text-center p-4 sm:p-6 bg-white/80 backdrop-blur-enhanced rounded-2xl border border-blue-200/50 card-shadow-lg">
+              <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-1 sm:mb-2">8.6K</div>
+              <div className="text-xs sm:text-sm font-medium text-slate-600 uppercase tracking-wide">DCFC Ports</div>
             </div>
-            <div className="text-center p-6 bg-white/80 backdrop-blur-enhanced rounded-2xl border border-purple-200/50 card-shadow-lg">
-              <div className="text-3xl font-bold text-purple-600 mb-2">Last Refresh</div>
-              <div className="text-sm font-medium text-slate-600 uppercase tracking-wide">Oct 6, 2025</div>
+            <div className="text-center p-4 sm:p-6 bg-white/80 backdrop-blur-enhanced rounded-2xl border border-purple-200/50 card-shadow-lg">
+              <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-purple-600 mb-1 sm:mb-2">Oct 6</div>
+              <div className="text-xs sm:text-sm font-medium text-slate-600 uppercase tracking-wide">Last Refresh</div>
             </div>
           </div>
         </div>
@@ -69,34 +69,41 @@ export default function Home() {
 
       {/* TABS */}
       <nav className="sticky top-0 z-20 bg-white/95 backdrop-blur-enhanced border-b border-slate-200/50 shadow-lg">
-        <div className="mx-auto max-w-7xl px-6 py-6">
-          <div className="flex gap-2 p-2 bg-slate-100/90 rounded-2xl w-fit mx-auto lg:mx-0">
-            {TABS.map((t) => {
-              const active = t.key === tab;
-              return (
-                <button
-                  key={t.key}
-                  onClick={() => setTab(t.key)}
-                  className={`px-8 py-4 rounded-xl text-sm font-semibold transition-all duration-300 whitespace-nowrap
-                    ${active 
-                      ? 'bg-white text-slate-900 shadow-lg border border-slate-200/50 scale-105' 
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-white/70 hover:scale-102'
-                    }
-                  `}
-                  aria-pressed={active}
-                >
-                  {t.label}
-                </button>
-              );
-            })}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-4 sm:py-6">
+          <div className="overflow-x-auto">
+            <div className="flex gap-1 sm:gap-2 p-1 sm:p-2 bg-slate-100/90 rounded-2xl w-fit mx-auto lg:mx-0 min-w-max">
+              {TABS.map((t) => {
+                const active = t.key === tab;
+                return (
+                  <button
+                    key={t.key}
+                    onClick={() => setTab(t.key)}
+                    className={`px-3 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-lg sm:rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 whitespace-nowrap
+                      ${active 
+                        ? 'bg-white text-slate-900 shadow-lg border border-slate-200/50 scale-105' 
+                        : 'text-slate-600 hover:text-slate-900 hover:bg-white/70 hover:scale-102'
+                      }
+                    `}
+                    aria-pressed={active}
+                  >
+                    <span className="block sm:hidden">
+                      {t.label.split(' ')[0]}
+                    </span>
+                    <span className="hidden sm:block">
+                      {t.label}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
       </nav>
 
       {/* CONTENT */}
-      <section className="mx-auto max-w-7xl px-6 py-16">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-12 lg:py-16">
         {tab === 'summary' && (
-          <div className="grid gap-12">
+          <div className="grid gap-6 sm:gap-8 lg:gap-12">
             <Section title= "Project Overview" variant="primary">
               <div className="space-y-6">
                 <p className="text-xl leading-relaxed text-slate-700">
@@ -112,7 +119,7 @@ export default function Home() {
               </div>
             </Section>
 
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
               <Section title="Use Cases" variant="secondary">
                 <ul className="space-y-6">
                   <li className="flex items-start gap-4">
@@ -151,7 +158,7 @@ export default function Home() {
         )}
 
         {tab === 'sources' && (
-          <div className="grid gap-12">
+          <div className="grid gap-6 sm:gap-8 lg:gap-12">
             <Section title="Data Sources & Citations" variant="primary">
               <div className="grid gap-8">
                 <div className="p-8 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-100 card-shadow-lg">
@@ -189,23 +196,23 @@ export default function Home() {
         )}
 
         {tab === 'dashboards' && (
-          <div className="grid gap-12">
+          <div className="grid gap-6 sm:gap-8 lg:gap-12">
             <Section title="Interactive Dashboards" variant="primary">
               <div className="space-y-8">
-                <div className="p-8 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl border border-blue-100 card-shadow-lg">
-                  <h3 className="text-2xl font-bold text-slate-800 mb-4 flex items-center gap-3">
+                <div className="p-4 sm:p-6 lg:p-8 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl border border-blue-100 card-shadow-lg">
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
                     <span className="text-2xl"></span>
                     Insights on What We Have and Where It Clusters
                   </h3>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
                     {/* Card 1 - Overview */}
-                    <div className="p-6 bg-white/95 rounded-xl border border-blue-200 card-shadow-lg">
-                      <div className="text-xl font-bold text-blue-600 mb-2 flex items-center gap-2">
-                        <span className="text-2xl"></span>
+                    <div className="p-4 sm:p-6 bg-white/95 rounded-xl border border-blue-200 card-shadow-lg">
+                      <div className="text-lg sm:text-xl font-bold text-blue-600 mb-2 flex items-center gap-2">
+                        <span className="text-xl sm:text-2xl"></span>
                         Overview
                       </div>
-                      <div className="text-sm font-medium text-black mb-4">Statewide snapshot of ports, DCFC share & hotspots</div>
+                      <div className="text-xs sm:text-sm font-medium text-black mb-3 sm:mb-4">Statewide snapshot of ports, DCFC share & hotspots</div>
                       <div className="space-y-3">
                         <div className="flex items-start gap-2">
                           <span className="text-black font-bold">-</span>
@@ -219,12 +226,12 @@ export default function Home() {
                     </div>
 
                     {/* Card 2 - County: Supply vs Demand */}
-                    <div className="p-6 bg-white/95 rounded-xl border border-green-200 card-shadow-lg">
-                      <div className="text-xl font-bold text-blue-600 mb-2 flex items-center gap-2">
-                        <span className="text-2xl"></span>
+                    <div className="p-4 sm:p-6 bg-white/95 rounded-xl border border-green-200 card-shadow-lg">
+                      <div className="text-lg sm:text-xl font-bold text-blue-600 mb-2 flex items-center gap-2">
+                        <span className="text-xl sm:text-2xl"></span>
                         County: Supply vs Demand
                       </div>
-                      <div className="text-sm font-medium text-black mb-4">Coverage (ports per 1,000 EVs) by county</div>
+                      <div className="text-xs sm:text-sm font-medium text-black mb-3 sm:mb-4">Coverage (ports per 1,000 EVs) by county</div>
                       <div className="space-y-3">
                         <div className="flex items-start gap-2">
                           <span className="text-black font-bold">-</span>
@@ -238,12 +245,12 @@ export default function Home() {
                     </div>
 
                     {/* Card 3 - Strategic Planning (Siting Score) */}
-                    <div className="p-6 bg-white/95 rounded-xl border border-purple-200 card-shadow-lg">
-                      <div className="text-xl font-bold text-blue-600 mb-2 flex items-center gap-2">
-                        <span className="text-2xl"></span>
+                    <div className="p-4 sm:p-6 bg-white/95 rounded-xl border border-purple-200 card-shadow-lg">
+                      <div className="text-lg sm:text-xl font-bold text-blue-600 mb-2 flex items-center gap-2">
+                        <span className="text-xl sm:text-2xl"></span>
                         Strategic Planning (Siting Score)
                       </div>
-                      <div className="text-sm font-medium text-black mb-4">Where new DCFC adds the most value</div>
+                      <div className="text-xs sm:text-sm font-medium text-black mb-3 sm:mb-4">Where new DCFC adds the most value</div>
                       <div className="space-y-3">
                         <div className="flex items-start gap-2">
                           <span className="text-black font-bold">-</span>
@@ -257,12 +264,12 @@ export default function Home() {
                     </div>
 
                     {/* Card 4 - Opportunities & Likely Busy (Proxies) */}
-                    <div className="p-6 bg-white/95 rounded-xl border border-orange-200 card-shadow-lg">
-                      <div className="text-xl font-bold text-blue-600 mb-2 flex items-center gap-2">
-                        <span className="text-2xl"></span>
+                    <div className="p-4 sm:p-6 bg-white/95 rounded-xl border border-orange-200 card-shadow-lg">
+                      <div className="text-lg sm:text-xl font-bold text-blue-600 mb-2 flex items-center gap-2">
+                        <span className="text-xl sm:text-2xl"></span>
                         Opportunities & Likely Busy (Proxies)
                       </div>
-                      <div className="text-sm font-medium text-black mb-4">Quick wins (0 DCFC) & likely busy sites</div>
+                      <div className="text-xs sm:text-sm font-medium text-black mb-3 sm:mb-4">Quick wins (0 DCFC) & likely busy sites</div>
                       <div className="space-y-3">
                         <div className="flex items-start gap-2">
                           <span className="text-black font-bold">-</span>
@@ -278,7 +285,7 @@ export default function Home() {
                 </div>
 
                 <div className="relative">
-                  <div className="aspect-[16/9] w-full rounded-3xl shadow-2xl ring-1 ring-slate-200 overflow-hidden bg-white card-shadow-lg">
+                  <div className="aspect-[4/3] sm:aspect-[16/10] lg:aspect-[16/9] w-full rounded-2xl sm:rounded-3xl shadow-2xl ring-1 ring-slate-200 overflow-hidden bg-white card-shadow-lg">
                     <iframe
                       title="California EV Charging Infrastructure Analysis Dashboard"
                       src={iframeSrc}
@@ -287,15 +294,15 @@ export default function Home() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="absolute -top-3 -right-3 w-6 h-6 bg-green-500 rounded-full animate-pulse-soft shadow-lg"></div>
+                  <div className="absolute -top-2 sm:-top-3 -right-2 sm:-right-3 w-5 sm:w-6 h-5 sm:h-6 bg-green-500 rounded-full animate-pulse-soft shadow-lg"></div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-6 p-6 bg-slate-50 rounded-2xl border border-slate-200 card-shadow">
-                  <div className="flex items-center gap-3 text-slate-600">
-                    <span className="text-blue-500 text-xl"></span>
-                    <span className="font-semibold">Pro Tip:</span>
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 p-4 sm:p-6 bg-slate-50 rounded-2xl border border-slate-200 card-shadow">
+                  <div className="flex items-center gap-2 sm:gap-3 text-slate-600">
+                    <span className="text-blue-500 text-lg sm:text-xl"></span>
+                    <span className="font-semibold text-sm sm:text-base">Pro Tip:</span>
                   </div>
-                  <div className="text-slate-700 flex-1 leading-relaxed">
+                  <div className="text-slate-700 flex-1 leading-relaxed text-sm sm:text-base">
                     Click the expand icon in the Tableau toolbar for full-screen analysis. Use the dashboard tabs to navigate between different analytical views and interact with map filters for detailed regional insights.
                   </div>
                 </div>
@@ -305,7 +312,7 @@ export default function Home() {
         )}
 
         {tab === 'insights' && (
-          <div className="grid gap-12">
+          <div className="grid gap-6 sm:gap-8 lg:gap-12">
             <Section title="Detailed Insights" variant="primary">
               <div className="space-y-8">
                 <p className="text-xl text-slate-700 leading-relaxed mb-8">
@@ -422,7 +429,7 @@ export default function Home() {
         )}
 
         {tab === 'method' && (
-          <div className="grid gap-12">
+          <div className="grid gap-6 sm:gap-8 lg:gap-12">
             <Section title="Methodology & Scoring" variant="primary">
               <div className="space-y-8">
                 <p className="text-xl text-slate-700 leading-relaxed mb-8">
@@ -565,8 +572,8 @@ function Section({
   };
 
   return (
-    <section className={`rounded-3xl border p-8 lg:p-12 card-shadow-lg ${variantStyles[variant]}`}>
-      <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-8">
+    <section className={`rounded-2xl sm:rounded-3xl border p-4 sm:p-6 lg:p-8 xl:p-12 card-shadow-lg ${variantStyles[variant]}`}>
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-6 sm:mb-8">
         {title}
       </h2>
       <div className="prose prose-slate prose-lg max-w-none">

@@ -111,3 +111,36 @@ html, body {
   background: var(--background);
 }
 
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  .text-california-gradient {
+    background: linear-gradient(135deg, #16a34a 0%, #2563eb 50%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+  }
+  
+  /* Improve touch targets on mobile */
+  button {
+    min-height: 44px;
+  }
+  
+  /* Better spacing for mobile cards */
+  .card-shadow-lg {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+  
+  /* Optimize text for mobile reading */
+  p {
+    line-height: 1.7;
+  }
+}
+
+/* Tablet-specific improvements */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .card-shadow-lg {
+    box-shadow: 0 8px 12px -2px rgb(0 0 0 / 0.1), 0 3px 5px -3px rgb(0 0 0 / 0.1);
+  }
+}
+

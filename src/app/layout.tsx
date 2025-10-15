@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   applicationName: "California EV Charging Insights",
   authors: [{ name: "Kalyani Kishor Mohite" }],
   themeColor: "#ffffff",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+  },
   openGraph: {
     title: "California EV Charging Insights",
     description:

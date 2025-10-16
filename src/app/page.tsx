@@ -293,26 +293,66 @@ export default function Home() {
                   </div>
                 </div>
 
+                {/* Dashboard Preview - Mobile vs Desktop */}
                 <div className="relative mt-4 md:mt-6">
-                  <div className="aspect-[3/4] sm:aspect-[4/3] md:aspect-[16/10] lg:aspect-[16/9] w-full rounded-lg md:rounded-2xl lg:rounded-3xl shadow-lg md:shadow-2xl ring-1 ring-slate-200 overflow-hidden bg-white card-shadow">
-                    <iframe
-                      title="California EV Charging Infrastructure Analysis Dashboard"
-                      src={iframeSrc}
-                      className="h-full w-full border-0"
-                      allowFullScreen
-                      loading="lazy"
-                    />
+                  {/* Mobile: Show preview card with "Open Dashboard" button */}
+                  <div className="block md:hidden">
+                    <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-lg border border-blue-200 p-6 text-center card-shadow">
+                      <div className="flex items-center justify-center mb-4">
+                        <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse-soft mr-2"></div>
+                        <span className="text-sm font-medium text-slate-600">Interactive Dashboard Available</span>
+                      </div>
+                      
+                      <div className="mb-4">
+                        <h4 className="text-lg font-bold text-slate-900 mb-2">California EV Charging Analysis</h4>
+                        <p className="text-sm text-slate-600 leading-relaxed">
+                          Explore interactive maps, county comparisons, and detailed analytics in the full dashboard experience.
+                        </p>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-3 mb-4 text-xs">
+                        <div className="bg-white/80 rounded-lg p-3 border border-blue-100">
+                          <div className="font-semibold text-blue-600">🗺️ Maps</div>
+                          <div className="text-slate-600">Regional coverage</div>
+                        </div>
+                        <div className="bg-white/80 rounded-lg p-3 border border-green-100">
+                          <div className="font-semibold text-green-600">📊 Analytics</div>
+                          <div className="text-slate-600">County insights</div>
+                        </div>
+                      </div>
+
+                      <button
+                        onClick={() => window.open(iframeSrc, '_blank')}
+                        className="w-full bg-gradient-to-r from-blue-600 to-green-600 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-700 hover:to-green-700 transition-all duration-200 shadow-lg flex items-center justify-center gap-2"
+                      >
+                        <span>🚀 Open Full Dashboard</span>
+                        <span className="text-sm opacity-90">↗</span>
+                      </button>
+                    </div>
                   </div>
-                  <div className="absolute -top-1.5 md:-top-3 -right-1.5 md:-right-3 w-4 md:w-6 h-4 md:h-6 bg-green-500 rounded-full animate-pulse-soft shadow-lg"></div>
+
+                  {/* Desktop: Show full iframe */}
+                  <div className="hidden md:block relative">
+                    <div className="aspect-[16/10] lg:aspect-[16/9] w-full rounded-2xl lg:rounded-3xl shadow-2xl ring-1 ring-slate-200 overflow-hidden bg-white card-shadow-lg">
+                      <iframe
+                        title="California EV Charging Infrastructure Analysis Dashboard"
+                        src={iframeSrc}
+                        className="h-full w-full border-0"
+                        allowFullScreen
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="absolute -top-3 -right-3 w-6 h-6 bg-green-500 rounded-full animate-pulse-soft shadow-lg"></div>
+                  </div>
                 </div>
 
                 <div className="flex flex-col gap-2 md:gap-3 p-3 md:p-4 lg:p-6 bg-slate-50 rounded-lg md:rounded-2xl border border-slate-200 card-shadow mt-4 md:mt-6">
                   <div className="flex items-center gap-2 text-slate-600">
-                    <span className="text-blue-500 text-base md:text-lg"></span>
-                    <span className="font-semibold text-sm md:text-base">💡 Mobile Tip:</span>
+                    <span className="text-blue-500 text-base md:text-lg">💡</span>
+                    <span className="font-semibold text-sm md:text-base">Pro Tip:</span>
                   </div>
                   <div className="text-slate-700 leading-relaxed text-xs md:text-sm lg:text-base">
-                    <span className="block md:hidden">Tap the fullscreen icon (⛶) for better dashboard interaction on mobile.</span>
+                    <span className="block md:hidden">The dashboard opens in a new tab optimized for mobile interaction. Use pinch-to-zoom and tap to explore different regions and data views.</span>
                     <span className="hidden md:block">Click the expand icon in the Tableau toolbar for full-screen analysis. Use the dashboard tabs to navigate between different analytical views and interact with map filters for detailed regional insights.</span>
                   </div>
                 </div>

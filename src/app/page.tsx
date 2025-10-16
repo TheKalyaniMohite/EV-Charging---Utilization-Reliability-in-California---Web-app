@@ -22,74 +22,83 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-green-50">
       {/* HEADER */}
-      <header className="relative mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
-        {/* Background decorative elements */}
-        <div className="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-br from-green-100/30 to-blue-100/30 rounded-full blur-3xl -z-10"></div>
-        <div className="absolute bottom-0 left-0 w-48 sm:w-64 h-48 sm:h-64 bg-gradient-to-tr from-emerald-100/40 to-cyan-100/40 rounded-full blur-2xl -z-10"></div>
+      <header className="relative mx-auto max-w-7xl px-3 py-8 md:px-6 md:py-16 lg:py-20">
+        {/* Background decorative elements - hidden on mobile for performance */}
+        <div className="hidden sm:block absolute top-0 right-0 w-64 md:w-96 h-64 md:h-96 bg-gradient-to-br from-green-100/30 to-blue-100/30 rounded-full blur-3xl -z-10"></div>
+        <div className="hidden sm:block absolute bottom-0 left-0 w-48 md:w-64 h-48 md:h-64 bg-gradient-to-tr from-emerald-100/40 to-cyan-100/40 rounded-full blur-2xl -z-10"></div>
         
-        <div className="relative text-center lg:text-left">
+        <div className="relative text-center">
           {/* Live badge */}
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-green-100 text-green-800 rounded-full text-xs sm:text-sm font-medium mb-6 sm:mb-8 card-shadow">
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse-soft"></div>
-            Based on 2024 data
+          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-100 text-green-800 rounded-full text-xs font-medium mb-4 md:mb-8 card-shadow">
+            <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse-soft"></div>
+            <span className="hidden sm:inline">Based on 2024 data</span>
+            <span className="sm:hidden">2024 Data</span>
           </div>
           
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-slate-900 mb-4 sm:mb-6">
-            EV Charging: Utilization & Reliability
-            <span className="block text-california-gradient mt-1 sm:mt-2">
+          <h1 className="text-2xl leading-tight sm:text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 mb-3 md:mb-6 px-1">
+            <span className="block">EV Charging:</span>
+            <span className="block">Utilization & Reliability</span>
+            <span className="block text-california-gradient mt-1 text-xl sm:text-2xl md:text-4xl lg:text-5xl">
               in California
             </span>
           </h1>
           
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 mt-6 sm:mt-8 max-w-4xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0">
-          This is a comprehensive analysis of where EV chargers exist in California relative to demand, pinpointing coverage gaps, high-demand counties, and priority sites for adding DC fast charging.
+          <p className="text-sm leading-relaxed sm:text-base md:text-lg lg:text-xl text-slate-600 mt-4 md:mt-8 max-w-2xl md:max-w-4xl mx-auto px-2">
+            Comprehensive analysis of EV charger locations vs. demand, highlighting coverage gaps and priority sites for DC fast charging expansion.
           </p>
           
           {/* Key statistics */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-8 sm:mt-12 px-2 sm:px-0">
-            <div className="text-center p-4 sm:p-6 bg-white/80 backdrop-blur-enhanced rounded-2xl border border-slate-200/50 card-shadow-lg">
-              <div className="text-2xl sm:text-3xl font-bold text-slate-900 mb-1 sm:mb-2">58</div>
-              <div className="text-xs sm:text-sm font-medium text-slate-600 uppercase tracking-wide">Counties</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mt-6 md:mt-12 px-2 max-w-4xl mx-auto">
+            <div className="text-center p-3 md:p-6 bg-white/90 backdrop-blur-enhanced rounded-xl md:rounded-2xl border border-slate-200/50 card-shadow">
+              <div className="text-lg sm:text-2xl md:text-3xl font-bold text-slate-900 mb-1">58</div>
+              <div className="text-xs font-medium text-slate-600 uppercase tracking-wide leading-tight">Counties</div>
             </div>
-            <div className="text-center p-4 sm:p-6 bg-white/80 backdrop-blur-enhanced rounded-2xl border border-green-200/50 card-shadow-lg">
-              <div className="text-2xl sm:text-3xl font-bold text-green-600 mb-1 sm:mb-2">136K+</div>
-              <div className="text-xs sm:text-sm font-medium text-slate-600 uppercase tracking-wide">Charging Ports</div>
+            <div className="text-center p-3 md:p-6 bg-white/90 backdrop-blur-enhanced rounded-xl md:rounded-2xl border border-green-200/50 card-shadow">
+              <div className="text-lg sm:text-2xl md:text-3xl font-bold text-green-600 mb-1">136K+</div>
+              <div className="text-xs font-medium text-slate-600 uppercase tracking-wide leading-tight">Ports</div>
             </div>
-            <div className="text-center p-4 sm:p-6 bg-white/80 backdrop-blur-enhanced rounded-2xl border border-blue-200/50 card-shadow-lg">
-              <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-1 sm:mb-2">8.6K</div>
-              <div className="text-xs sm:text-sm font-medium text-slate-600 uppercase tracking-wide">DCFC Ports</div>
+            <div className="text-center p-3 md:p-6 bg-white/90 backdrop-blur-enhanced rounded-xl md:rounded-2xl border border-blue-200/50 card-shadow">
+              <div className="text-lg sm:text-2xl md:text-3xl font-bold text-blue-600 mb-1">8.6K</div>
+              <div className="text-xs font-medium text-slate-600 uppercase tracking-wide leading-tight">DCFC</div>
             </div>
-            <div className="text-center p-4 sm:p-6 bg-white/80 backdrop-blur-enhanced rounded-2xl border border-purple-200/50 card-shadow-lg">
-              <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-purple-600 mb-1 sm:mb-2">Oct 6</div>
-              <div className="text-xs sm:text-sm font-medium text-slate-600 uppercase tracking-wide">Last Refresh</div>
+            <div className="text-center p-3 md:p-6 bg-white/90 backdrop-blur-enhanced rounded-xl md:rounded-2xl border border-purple-200/50 card-shadow">
+              <div className="text-base sm:text-xl md:text-2xl font-bold text-purple-600 mb-1">Oct 15</div>
+              <div className="text-xs font-medium text-slate-600 uppercase tracking-wide leading-tight">Updated</div>
             </div>
           </div>
         </div>
       </header>
 
       {/* TABS */}
-      <nav className="sticky top-0 z-20 bg-white/95 backdrop-blur-enhanced border-b border-slate-200/50 shadow-lg">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-4 sm:py-6">
-          <div className="overflow-x-auto">
-            <div className="flex gap-1 sm:gap-2 p-1 sm:p-2 bg-slate-100/90 rounded-2xl w-fit mx-auto lg:mx-0 min-w-max">
+      <nav className="sticky top-0 z-20 bg-white/98 backdrop-blur-enhanced border-b border-slate-200/50 shadow-sm">
+        <div className="mx-auto max-w-7xl px-3 py-3">
+          <div className="overflow-x-auto scrollbar-hide">
+            <div className="flex gap-1 p-1 bg-slate-50 rounded-xl w-fit mx-auto min-w-max">
               {TABS.map((t) => {
                 const active = t.key === tab;
+                const mobileLabels = {
+                  'summary': 'Summary',
+                  'sources': 'Sources', 
+                  'dashboards': 'Data',
+                  'insights': 'Insights',
+                  'method': 'Methods'
+                };
                 return (
                   <button
                     key={t.key}
                     onClick={() => setTab(t.key)}
-                    className={`px-3 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-lg sm:rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 whitespace-nowrap
+                    className={`px-2.5 md:px-4 lg:px-6 py-2 md:py-2.5 rounded-lg text-xs md:text-sm font-semibold transition-all duration-200 whitespace-nowrap min-w-0 flex-shrink-0
                       ${active 
-                        ? 'bg-white text-slate-900 shadow-lg border border-slate-200/50 scale-105' 
-                        : 'text-slate-600 hover:text-slate-900 hover:bg-white/70 hover:scale-102'
+                        ? 'bg-white text-slate-900 shadow-md border border-slate-200/50' 
+                        : 'text-slate-600 hover:text-slate-900 hover:bg-white/50'
                       }
                     `}
                     aria-pressed={active}
                   >
-                    <span className="block sm:hidden">
-                      {t.label.split(' ')[0]}
+                    <span className="md:hidden">
+                      {mobileLabels[t.key]}
                     </span>
-                    <span className="hidden sm:block">
+                    <span className="hidden md:inline">
                       {t.label}
                     </span>
                   </button>
@@ -101,7 +110,7 @@ export default function Home() {
       </nav>
 
       {/* CONTENT */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-12 lg:py-16">
+      <section className="mx-auto max-w-7xl px-3 py-6 md:px-6 md:py-12 lg:py-16">
         {tab === 'summary' && (
           <div className="grid gap-6 sm:gap-8 lg:gap-12">
             <Section title= "Project Overview" variant="primary">
@@ -199,93 +208,93 @@ export default function Home() {
           <div className="grid gap-6 sm:gap-8 lg:gap-12">
             <Section title="Interactive Dashboards" variant="primary">
               <div className="space-y-8">
-                <div className="p-4 sm:p-6 lg:p-8 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl border border-blue-100 card-shadow-lg">
-                  <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
-                    <span className="text-2xl"></span>
-                    Insights on What We Have and Where It Clusters
+                <div className="p-3 md:p-6 lg:p-8 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl md:rounded-2xl border border-blue-100 card-shadow">
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-slate-800 mb-3 md:mb-4 flex items-center gap-2">
+                    <span className="text-lg md:text-xl lg:text-2xl hidden sm:inline"></span>
+                    <span className="leading-tight">Key Insights: Coverage & Clustering Analysis</span>
                   </h3>
                   
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
                     {/* Card 1 - Overview */}
-                    <div className="p-4 sm:p-6 bg-white/95 rounded-xl border border-blue-200 card-shadow-lg">
-                      <div className="text-lg sm:text-xl font-bold text-blue-600 mb-2 flex items-center gap-2">
-                        <span className="text-xl sm:text-2xl"></span>
-                        Overview
+                    <div className="p-3 md:p-4 lg:p-6 bg-white/95 rounded-lg md:rounded-xl border border-blue-200 card-shadow">
+                      <div className="text-base md:text-lg lg:text-xl font-bold text-blue-600 mb-2 flex items-center gap-1.5">
+                        <span className="text-base md:text-lg lg:text-xl hidden sm:inline"></span>
+                        <span>Overview</span>
                       </div>
-                      <div className="text-xs sm:text-sm font-medium text-black mb-3 sm:mb-4">Statewide snapshot of ports, DCFC share & hotspots</div>
-                      <div className="space-y-3">
-                        <div className="flex items-start gap-2">
-                          <span className="text-black font-bold">-</span>
-                          <p className="text-sm text-black"><strong>136,620</strong> public charging ports (latest AFDC).</p>
+                      <div className="text-xs md:text-sm font-medium text-black mb-2 md:mb-3 leading-tight">Statewide ports & DCFC distribution</div>
+                      <div className="space-y-2 md:space-y-3">
+                        <div className="flex items-start gap-1.5 md:gap-2">
+                          <span className="text-black font-bold text-sm">•</span>
+                          <p className="text-xs md:text-sm text-black leading-relaxed"><strong>136,620</strong> public charging ports</p>
                         </div>
-                        <div className="flex items-start gap-2">
-                          <span className="text-black font-bold">-</span>
-                          <p className="text-sm text-black">DCFC ≈ <strong>7–8%</strong> of ports; largest cluster around Los Angeles.</p>
+                        <div className="flex items-start gap-1.5 md:gap-2">
+                          <span className="text-black font-bold text-sm">•</span>
+                          <p className="text-xs md:text-sm text-black leading-relaxed">DCFC ≈ <strong>7–8%</strong> of ports; concentrated in LA region</p>
                         </div>
                       </div>
                     </div>
 
                     {/* Card 2 - County: Supply vs Demand */}
-                    <div className="p-4 sm:p-6 bg-white/95 rounded-xl border border-green-200 card-shadow-lg">
-                      <div className="text-lg sm:text-xl font-bold text-blue-600 mb-2 flex items-center gap-2">
-                        <span className="text-xl sm:text-2xl"></span>
-                        County: Supply vs Demand
+                    <div className="p-3 md:p-4 lg:p-6 bg-white/95 rounded-lg md:rounded-xl border border-green-200 card-shadow">
+                      <div className="text-base md:text-lg lg:text-xl font-bold text-blue-600 mb-2 flex items-center gap-1.5">
+                        <span className="text-base md:text-lg lg:text-xl hidden sm:inline"></span>
+                        <span>Supply vs Demand</span>
                       </div>
-                      <div className="text-xs sm:text-sm font-medium text-black mb-3 sm:mb-4">Coverage (ports per 1,000 EVs) by county</div>
-                      <div className="space-y-3">
-                        <div className="flex items-start gap-2">
-                          <span className="text-black font-bold">-</span>
-                          <p className="text-sm text-black">Highlights <strong>under-covered counties</strong> where EVs outnumber ports.</p>
+                      <div className="text-xs md:text-sm font-medium text-black mb-2 md:mb-3 leading-tight">Coverage analysis by county</div>
+                      <div className="space-y-2 md:space-y-3">
+                        <div className="flex items-start gap-1.5 md:gap-2">
+                          <span className="text-black font-bold text-sm">•</span>
+                          <p className="text-xs md:text-sm text-black leading-relaxed">Shows <strong>under-covered counties</strong> with high EV adoption</p>
                         </div>
-                        <div className="flex items-start gap-2">
-                          <span className="text-black font-bold">-</span>
-                          <p className="text-sm text-black">Use to compare <strong>coverage vs EV count</strong> at a glance.</p>
+                        <div className="flex items-start gap-1.5 md:gap-2">
+                          <span className="text-black font-bold text-sm">•</span>
+                          <p className="text-xs md:text-sm text-black leading-relaxed">Compare <strong>coverage ratios</strong> across regions</p>
                         </div>
                       </div>
                     </div>
 
                     {/* Card 3 - Strategic Planning (Siting Score) */}
-                    <div className="p-4 sm:p-6 bg-white/95 rounded-xl border border-purple-200 card-shadow-lg">
-                      <div className="text-lg sm:text-xl font-bold text-blue-600 mb-2 flex items-center gap-2">
-                        <span className="text-xl sm:text-2xl"></span>
-                        Strategic Planning (Siting Score)
+                    <div className="p-3 md:p-4 lg:p-6 bg-white/95 rounded-lg md:rounded-xl border border-purple-200 card-shadow">
+                      <div className="text-base md:text-lg lg:text-xl font-bold text-blue-600 mb-2 flex items-center gap-1.5">
+                        <span className="text-base md:text-lg lg:text-xl hidden sm:inline"></span>
+                        <span>Strategic Planning</span>
                       </div>
-                      <div className="text-xs sm:text-sm font-medium text-black mb-3 sm:mb-4">Where new DCFC adds the most value</div>
-                      <div className="space-y-3">
-                        <div className="flex items-start gap-2">
-                          <span className="text-black font-bold">-</span>
-                          <p className="text-sm text-black">Top candidates: <strong>Orange, San Diego, Santa Clara</strong> (high EVs + lower coverage).</p>
+                      <div className="text-xs md:text-sm font-medium text-black mb-2 md:mb-3 leading-tight">Priority locations for new DCFC</div>
+                      <div className="space-y-2 md:space-y-3">
+                        <div className="flex items-start gap-1.5 md:gap-2">
+                          <span className="text-black font-bold text-sm">•</span>
+                          <p className="text-xs md:text-sm text-black leading-relaxed">Top targets: <strong>Orange, San Diego, Santa Clara</strong></p>
                         </div>
-                        <div className="flex items-start gap-2">
-                          <span className="text-black font-bold">-</span>
-                          <p className="text-sm text-black">Score blends <strong>low coverage × high demand</strong> → prioritized DCFC siting.</p>
+                        <div className="flex items-start gap-1.5 md:gap-2">
+                          <span className="text-black font-bold text-sm">•</span>
+                          <p className="text-xs md:text-sm text-black leading-relaxed">Combines <strong>demand + coverage gaps</strong> for optimal siting</p>
                         </div>
                       </div>
                     </div>
 
                     {/* Card 4 - Opportunities & Likely Busy (Proxies) */}
-                    <div className="p-4 sm:p-6 bg-white/95 rounded-xl border border-orange-200 card-shadow-lg">
-                      <div className="text-lg sm:text-xl font-bold text-blue-600 mb-2 flex items-center gap-2">
-                        <span className="text-xl sm:text-2xl"></span>
-                        Opportunities & Likely Busy (Proxies)
+                    <div className="p-3 md:p-4 lg:p-6 bg-white/95 rounded-lg md:rounded-xl border border-orange-200 card-shadow">
+                      <div className="text-base md:text-lg lg:text-xl font-bold text-blue-600 mb-2 flex items-center gap-1.5">
+                        <span className="text-base md:text-lg lg:text-xl hidden sm:inline"></span>
+                        <span>Opportunities & Busy Sites</span>
                       </div>
-                      <div className="text-xs sm:text-sm font-medium text-black mb-3 sm:mb-4">Quick wins (0 DCFC) & likely busy sites</div>
-                      <div className="space-y-3">
-                        <div className="flex items-start gap-2">
-                          <span className="text-black font-bold">-</span>
-                          <p className="text-sm text-black"><strong>0-DCFC cities</strong> with many L2: Pasadena, Playa del Rey, Wilmington.</p>
+                      <div className="text-xs md:text-sm font-medium text-black mb-2 md:mb-3 leading-tight">Quick wins & high-utilization sites</div>
+                      <div className="space-y-2 md:space-y-3">
+                        <div className="flex items-start gap-1.5 md:gap-2">
+                          <span className="text-black font-bold text-sm">•</span>
+                          <p className="text-xs md:text-sm text-black leading-relaxed"><strong>Zero DCFC cities:</strong> Pasadena, Playa del Rey, Wilmington</p>
                         </div>
-                        <div className="flex items-start gap-2">
-                          <span className="text-black font-bold">-</span>
-                          <p className="text-sm text-black">Likely busy: <strong>LADWP – John Ferraro Building</strong> (12 DCFC, 350 total ports).</p>
+                        <div className="flex items-start gap-1.5 md:gap-2">
+                          <span className="text-black font-bold text-sm">•</span>
+                          <p className="text-xs md:text-sm text-black leading-relaxed"><strong>High-traffic site:</strong> LADWP Ferraro Building</p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="relative">
-                  <div className="aspect-[4/3] sm:aspect-[16/10] lg:aspect-[16/9] w-full rounded-2xl sm:rounded-3xl shadow-2xl ring-1 ring-slate-200 overflow-hidden bg-white card-shadow-lg">
+                <div className="relative mt-4 md:mt-6">
+                  <div className="aspect-[3/4] sm:aspect-[4/3] md:aspect-[16/10] lg:aspect-[16/9] w-full rounded-lg md:rounded-2xl lg:rounded-3xl shadow-lg md:shadow-2xl ring-1 ring-slate-200 overflow-hidden bg-white card-shadow">
                     <iframe
                       title="California EV Charging Infrastructure Analysis Dashboard"
                       src={iframeSrc}
@@ -294,16 +303,17 @@ export default function Home() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="absolute -top-2 sm:-top-3 -right-2 sm:-right-3 w-5 sm:w-6 h-5 sm:h-6 bg-green-500 rounded-full animate-pulse-soft shadow-lg"></div>
+                  <div className="absolute -top-1.5 md:-top-3 -right-1.5 md:-right-3 w-4 md:w-6 h-4 md:h-6 bg-green-500 rounded-full animate-pulse-soft shadow-lg"></div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 p-4 sm:p-6 bg-slate-50 rounded-2xl border border-slate-200 card-shadow">
-                  <div className="flex items-center gap-2 sm:gap-3 text-slate-600">
-                    <span className="text-blue-500 text-lg sm:text-xl"></span>
-                    <span className="font-semibold text-sm sm:text-base">Pro Tip:</span>
+                <div className="flex flex-col gap-2 md:gap-3 p-3 md:p-4 lg:p-6 bg-slate-50 rounded-lg md:rounded-2xl border border-slate-200 card-shadow mt-4 md:mt-6">
+                  <div className="flex items-center gap-2 text-slate-600">
+                    <span className="text-blue-500 text-base md:text-lg"></span>
+                    <span className="font-semibold text-sm md:text-base">💡 Mobile Tip:</span>
                   </div>
-                  <div className="text-slate-700 flex-1 leading-relaxed text-sm sm:text-base">
-                    Click the expand icon in the Tableau toolbar for full-screen analysis. Use the dashboard tabs to navigate between different analytical views and interact with map filters for detailed regional insights.
+                  <div className="text-slate-700 leading-relaxed text-xs md:text-sm lg:text-base">
+                    <span className="block md:hidden">Tap the fullscreen icon (⛶) for better dashboard interaction on mobile.</span>
+                    <span className="hidden md:block">Click the expand icon in the Tableau toolbar for full-screen analysis. Use the dashboard tabs to navigate between different analytical views and interact with map filters for detailed regional insights.</span>
                   </div>
                 </div>
               </div>
@@ -572,8 +582,8 @@ function Section({
   };
 
   return (
-    <section className={`rounded-2xl sm:rounded-3xl border p-4 sm:p-6 lg:p-8 xl:p-12 card-shadow-lg ${variantStyles[variant]}`}>
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-6 sm:mb-8">
+    <section className={`rounded-xl md:rounded-2xl lg:rounded-3xl border p-4 md:p-6 lg:p-8 xl:p-12 card-shadow ${variantStyles[variant]}`}>
+      <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-slate-900 tracking-tight mb-4 md:mb-6 lg:mb-8 leading-tight">
         {title}
       </h2>
       <div className="prose prose-slate prose-lg max-w-none">

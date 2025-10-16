@@ -111,36 +111,84 @@ html, body {
   background: var(--background);
 }
 
-/* Mobile-specific improvements */
-@media (max-width: 640px) {
+/* Mobile-first responsive improvements */
+@media (max-width: 768px) {
+  /* Force mobile-optimized typography */
+  body {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
   .text-california-gradient {
     background: linear-gradient(135deg, #16a34a 0%, #2563eb 50%, #7c3aed 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    line-height: 1.1;
+    line-height: 1.2;
   }
   
-  /* Improve touch targets on mobile */
+  /* Improve touch targets */
   button {
     min-height: 44px;
+    min-width: 44px;
   }
   
-  /* Better spacing for mobile cards */
+  /* Lighter shadows for performance */
   .card-shadow-lg {
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    box-shadow: 0 2px 4px -1px rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   }
   
-  /* Optimize text for mobile reading */
-  p {
-    line-height: 1.7;
+  .card-shadow {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08);
+  }
+  
+  /* Optimize text for mobile */
+  p, li, span {
+    line-height: 1.6;
+  }
+  
+  /* Hide scrollbars on mobile for cleaner look */
+  .scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Better mobile spacing */
+  .prose {
+    font-size: 14px;
+  }
+  
+  /* Optimize iframe for mobile */
+  iframe {
+    max-width: 100%;
   }
 }
 
-/* Tablet-specific improvements */
-@media (min-width: 641px) and (max-width: 1024px) {
+/* Small mobile devices */
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+  
+  /* Even more aggressive mobile optimizations */
+  .card-shadow-lg, .card-shadow {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  }
+  
+  /* Ensure text remains readable on very small screens */
+  h1, h2, h3 {
+    line-height: 1.2;
+  }
+}
+
+/* Tablet improvements */
+@media (min-width: 769px) and (max-width: 1024px) {
   .card-shadow-lg {
-    box-shadow: 0 8px 12px -2px rgb(0 0 0 / 0.1), 0 3px 5px -3px rgb(0 0 0 / 0.1);
+    box-shadow: 0 6px 10px -2px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   }
 }
 

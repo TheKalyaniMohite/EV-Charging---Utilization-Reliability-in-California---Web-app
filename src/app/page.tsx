@@ -312,11 +312,11 @@ export default function Home() {
 
                       <div className="grid grid-cols-2 gap-3 mb-4 text-xs">
                         <div className="bg-white/80 rounded-lg p-3 border border-blue-100">
-                          <div className="font-semibold text-blue-600">🗺️ Maps</div>
+                          <div className="font-semibold text-blue-600">Maps</div>
                           <div className="text-slate-600">Regional coverage</div>
                         </div>
                         <div className="bg-white/80 rounded-lg p-3 border border-green-100">
-                          <div className="font-semibold text-green-600">📊 Analytics</div>
+                          <div className="font-semibold text-green-600">Analytics</div>
                           <div className="text-slate-600">County insights</div>
                         </div>
                       </div>
@@ -325,7 +325,7 @@ export default function Home() {
                         onClick={() => window.open(iframeSrc, '_blank')}
                         className="w-full bg-gradient-to-r from-blue-600 to-green-600 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-700 hover:to-green-700 transition-all duration-200 shadow-lg flex items-center justify-center gap-2"
                       >
-                        <span>🚀 Open Full Dashboard</span>
+                        <span>Open Full Dashboard</span>
                         <span className="text-sm opacity-90">↗</span>
                       </button>
                     </div>
@@ -348,7 +348,7 @@ export default function Home() {
 
                 <div className="flex flex-col gap-2 md:gap-3 p-3 md:p-4 lg:p-6 bg-slate-50 rounded-lg md:rounded-2xl border border-slate-200 card-shadow mt-4 md:mt-6">
                   <div className="flex items-center gap-2 text-slate-600">
-                    <span className="text-blue-500 text-base md:text-lg">💡</span>
+                    <span className="text-blue-500 text-base md:text-lg">•</span>
                     <span className="font-semibold text-sm md:text-base">Pro Tip:</span>
                   </div>
                   <div className="text-slate-700 leading-relaxed text-xs md:text-sm lg:text-base">

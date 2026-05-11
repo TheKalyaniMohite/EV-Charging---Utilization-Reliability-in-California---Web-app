@@ -3,7 +3,7 @@
 
 import { useMemo, useState } from 'react';
 
-const OVERVIEW_URL = "https://public.tableau.com/views/CaliforniaEVChargingInsightsDashboard/CaliforniaEVChargingOverview?:showVizHome=no&:tabs=yes&:toolbar=yes&language=en-US";
+const OVERVIEW_URL = "https://public.tableau.com/views/CaliforniaEVChargingInsightsDashboard/Planning-sittingBusy?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
 
 type TabKey = 'summary' | 'sources' | 'dashboards' | 'insights' | 'method';
 
